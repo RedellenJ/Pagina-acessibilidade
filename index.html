@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pagina exemplo com foco em acessibilidade, semantica HTML e contraste AA.">
+  <title>Desafio Acessibilidade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteudo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir para o inicio">Acessibilidade</a>
+
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+      >
+        Menu
+      </button>
+
+      <nav aria-label="Menu principal">
+        <ul id="menu-principal" class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section id="inicio" class="hero" aria-labelledby="titulo-principal">
+      <div class="container">
+        <h1 id="titulo-principal">Pagina com acessibilidade</h1>
+        <p>
+          Objetivo deste projeto e demonstrar boas praticas de acessibilidade web, incluindo  
+          Estrutura semantica, navegacao por teclado, formulario acessivel,
+          imagens com texto alternativo e contraste em conformidade com WCAG AA.
+        </p>
+      </div>
+    </section>
+
+    <section id="recursos" class="section" aria-labelledby="titulo-recursos">
+      <div class="container">
+        <h2 id="titulo-recursos">Recursos de acessibilidade</h2>
+        <ul class="features">
+          <li>Ordem logica de foco e indicador visivel de teclado.</li>
+          <li>HTML: header, nav, main, section e footer.</li>
+          <li>Formulario com labels, instrucoes e feedback por campo.</li>
+          <li>Cores com contraste AA para textos e componentes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="galeria" class="section" aria-labelledby="titulo-galeria">
+      <div class="container">
+        <h2 id="titulo-galeria">Galeria com texto alternativo</h2>
+        <div class="gallery">
+          <figure class="card">
+            <img
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80"
+              width="900"
+              height="600"
+              loading="lazy"
+              alt="Pessoa digitando codigo em um notebook, representando desenvolvimento acessivel"
+            >
+            <figcaption>Codigo com boas praticas de usabilidade.</figcaption>
+          </figure>
+          <figure class="card">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
+              width="900"
+              height="600"
+              loading="lazy"
+              alt="Equipe colaborando em uma mesa com notebooks, simbolizando design inclusivo"
+            >
+            <figcaption>Design inclusivo nasce da colaboracao.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section" aria-labelledby="titulo-formulario">
+      <div class="container form-wrap">
+        <h2 id="titulo-formulario">Formulario</h2>
+        <p id="ajuda-formulario">Campos com * sao obrigatorios.</p>
+
+        <form id="formulario-contato" novalidate aria-describedby="ajuda-formulario">
+          <div class="field">
+            <label for="nome">Nome completo *</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required>
+            <small id="erro-nome" class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <small id="erro-email" class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <small id="erro-mensagem" class="error" aria-live="polite"></small>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar formulario</button>
+          <p id="status-form" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Projeto demonstrativo de acessibilidade web.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
