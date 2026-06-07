@@ -45,7 +45,7 @@ if (form && statusForm) {
       {
         id: "email",
         errorId: "erro-email",
-        message: "Informe um e-mail valido.",
+        message: "Informe um e-mail válido.",
         validate: (value) => /.+@.+\..+/.test(value),
       },
       {
@@ -83,7 +83,7 @@ if (form && statusForm) {
       return;
     }
 
-    statusForm.textContent = "Formulario enviado com sucesso.";
+    statusForm.textContent = "Formulário enviado com sucesso.";
     form.reset();
   });
 }

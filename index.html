@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pagina exemplo com foco em acessibilidade, semantica HTML e contraste AA.">
+  <meta name="description" content="Página exemplo com foco em acessibilidade, semântica HTML e contraste AA.">
   <title>Desafio Acessibilidade</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo-principal">Pular para o conteudo principal</a>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Ir para o inicio">Acessibilidade</a>
+      <a class="brand" href="#inicio" aria-label="Ir para o início">Acessibilidade</a>
 
       <button
         id="menu-toggle"
@@ -26,7 +26,7 @@
 
       <nav aria-label="Menu principal">
         <ul id="menu-principal" class="menu">
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#inicio">Início</a></li>
           <li><a href="#recursos">Recursos</a></li>
           <li><a href="#galeria">Galeria</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -38,10 +38,10 @@
   <main id="conteudo-principal" tabindex="-1">
     <section id="inicio" class="hero" aria-labelledby="titulo-principal">
       <div class="container">
-        <h1 id="titulo-principal">Pagina com acessibilidade</h1>
+        <h1 id="titulo-principal">Página com acessibilidade</h1>
         <p>
-          Objetivo deste projeto e demonstrar boas praticas de acessibilidade web, incluindo  
-          Estrutura semantica, navegacao por teclado, formulario acessivel,
+          O objetivo deste projeto é demonstrar boas práticas de acessibilidade web, incluindo
+          estrutura semântica, navegação por teclado, formulário acessível,
           imagens com texto alternativo e contraste em conformidade com WCAG AA.
         </p>
       </div>
@@ -51,9 +51,9 @@
       <div class="container">
         <h2 id="titulo-recursos">Recursos de acessibilidade</h2>
         <ul class="features">
-          <li>Ordem logica de foco e indicador visivel de teclado.</li>
+          <li>Ordem lógica de foco e indicador visível de teclado.</li>
           <li>HTML: header, nav, main, section e footer.</li>
-          <li>Formulario com labels, instrucoes e feedback por campo.</li>
+          <li>Formulário com labels, instruções e feedback por campo.</li>
           <li>Cores com contraste AA para textos e componentes.</li>
         </ul>
       </div>
@@ -69,9 +69,9 @@
               width="900"
               height="600"
               loading="lazy"
-              alt="Pessoa digitando codigo em um notebook, representando desenvolvimento acessivel"
+              alt="Pessoa digitando código em um notebook, representando desenvolvimento acessível"
             >
-            <figcaption>Codigo com boas praticas de usabilidade.</figcaption>
+            <figcaption>Código com boas práticas de usabilidade.</figcaption>
           </figure>
           <figure class="card">
             <img
@@ -81,7 +81,7 @@
               loading="lazy"
               alt="Equipe colaborando em uma mesa com notebooks, simbolizando design inclusivo"
             >
-            <figcaption>Design inclusivo nasce da colaboracao.</figcaption>
+            <figcaption>Design inclusivo nasce da colaboração.</figcaption>
           </figure>
         </div>
       </div>
@@ -89,8 +89,8 @@
 
     <section id="contato" class="section" aria-labelledby="titulo-formulario">
       <div class="container form-wrap">
-        <h2 id="titulo-formulario">Formulario</h2>
-        <p id="ajuda-formulario">Campos com * sao obrigatorios.</p>
+        <h2 id="titulo-formulario">Formulário</h2>
+        <p id="ajuda-formulario">Campos com * são obrigatórios.</p>
 
         <form id="formulario-contato" novalidate aria-describedby="ajuda-formulario">
           <div class="field">
@@ -111,7 +111,7 @@
             <small id="erro-mensagem" class="error" aria-live="polite"></small>
           </div>
 
-          <button type="submit" class="btn-submit">Enviar formulario</button>
+          <button type="submit" class="btn-submit">Enviar formulário</button>
           <p id="status-form" class="status" role="status" aria-live="polite"></p>
         </form>
       </div>
